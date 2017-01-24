@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: password
+
+development:
+  <<: *default
+  database: cast_api_development
+
+production:
+  <<: *default
+  database: cast_api_production
+
+test:
+  <<: *default
+  database: cast_api_test
