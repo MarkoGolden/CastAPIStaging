@@ -22,9 +22,13 @@ module CastApi
     # config.i18n.default_locale = :de
     config.autoload_paths += %W(#{config.root}/lib)
    
-    # Timezone::Configure.begin do |c|
-    Timezone::Lookup.config(:google) do |c|
-      c.api_key = ENV['GOOGLE_API_KEY']
+    if ENV['GOOGLE_MAPS_API_KEY']
+        Timezone::Lookup.config(:google) { |c| c.api_key = ENV['GOOGLE_MAPS_API_KEY'] }
     end
+    # # Timezone::Configure.begin do |c|
+    # Timezone::Lookup.config(:google) do |c|
+    #   c.api_key = ENV['GOOGLE_API_KEY']
+    # end
+
   end
 end
