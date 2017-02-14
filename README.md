@@ -62,11 +62,6 @@ All the tests should be green.
 
 
 
-License
-----
-
-All the rights belong to Sian Morson.
-
 [Koala]:https://github.com/arsduo/koala
 [Bitly]:https://bitly.com/
 [SimpleCov]:https://github.com/colszowka/simplecov
